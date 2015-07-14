@@ -1,0 +1,8 @@
+{
+  "name": "piumosso.github.io example",
+  "short_name": "piumosso.github.io",
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "870384191034",
+  "gcm_user_visible_only": true
+}

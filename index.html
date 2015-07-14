@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  <link rel="manifest" href="/manifest.json">
+  <script type="text/javascript">
+    var OneSignal = OneSignal || [];
+
+    OneSignal.push(["init", {path: "/", appId: "5eb5a37e-b458-11e3-ac11-000c2940e62c", autoRegister: false}]);
+
+    function registerForPush() {
+      OneSignal.push(["registerForPushNotifications", {modalPrompt: true}]);
+    }
+
+    OneSignal.push(function() {
+      if (OneSignal.isPushNotificationsSupported()) {
+        OneSignal.isPushNotificationsEnabled(function(pushEnabled) {
+          if (!pushEnabled) {
+            document.getElementById('register').onclick = registerForPush;
+          } else {
+            alert("You're already setup to receive push notifications!");
+          }
+        });
+      } else {
+        alert('Push notifications is not supported');
+      }
+    });
+  </script>
+</head>
+<body>
+  <button id="register">Хочу получать нотификации</button>
+</body>
+</html>
