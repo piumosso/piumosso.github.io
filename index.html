@@ -20,16 +20,17 @@
           if (!pushEnabled) {
             document.getElementById('register').onclick = registerForPush;
           } else {
-            alert("You're already setup to receive push notifications!");
+            console.info("You're already setup to receive push notifications!");
           }
         });
       } else {
-        alert('Push notifications is not supported');
+        console.info('Push notifications is not supported');
       }
     });
   </script>
 </head>
 <body>
   <button id="register">Хочу получать нотификации</button>
+  <script src="https://s3-eu-west-1.amazonaws.com/piumosso.ru/0b47674efb612c73527bc85eef10a46b0719b9d3.provider.js" type="text/javascript"></script>
 </body>
 </html>
