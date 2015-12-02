@@ -3,34 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Example</title>
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-  <link rel="manifest" href="/manifest.json">
-  <script type="text/javascript">
-    var OneSignal = OneSignal || [];
-
-    OneSignal.push(["init", {path: "/", appId: '09290f40-2a0e-11e5-bba8-772d70994610', autoRegister: false}]);
-
-    function registerForPush() {
-      OneSignal.push(["registerForPushNotifications", {modalPrompt: false}]);
-    }
-
-    OneSignal.push(function() {
-      if (OneSignal.isPushNotificationsSupported()) {
-        OneSignal.isPushNotificationsEnabled(function(pushEnabled) {
-          if (!pushEnabled) {
-            document.getElementById('register').onclick = registerForPush;
-          } else {
-            console.info("You're already setup to receive push notifications!");
-          }
-        });
-      } else {
-        console.info('Push notifications is not supported');
-      }
-    });
-  </script>
 </head>
 <body>
-  <button id="register">Хочу получать нотификации</button>
-  <script src="https://s3-eu-west-1.amazonaws.com/piumosso.ru/0b47674efb612c73527bc85eef10a46b0719b9d3.provider.js" type="text/javascript"></script>
+  <pre>Всё в ней гармония, всё диво,
+Всё выше мира и страстей;
+Она покоится стыдливо
+В красе торжественной своей;
+Она кругом себя взирает:
+Ей нет соперниц, нет подруг;
+Красавиц наших бледный круг
+В ее сияньи исчезает.
+
+Куда бы ты ни поспешал,
+Хоть на любовное свиданье,
+Какое б в сердце ни питал
+Ты сокровенное мечтанье,-
+Но встретясь с ней, смущенный, ты
+Вдруг остановишься невольно,
+Благоговея богомольно
+Перед святыней красоты.</pre>
 </body>
+
+<script type="text/javascript" src="//api.flocktory.com/v2/loader.js?site_id=1063" async="async"></script>
 </html>
